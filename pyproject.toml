@@ -1,0 +1,83 @@
+[tool.poetry]
+name = "powereye-2"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.10"
+pandas = "^2.2.2"
+setuptools = "70.0.0"
+
+[[tool.poetry.source]]
+name = "pytorch_cpu"
+url = "https://download.pytorch.org/whl/cpu"
+priority = "explicit"
+
+[tool.isort]
+include_trailing_comma = true
+lines_after_imports = 2
+line_length = 120
+combine_as_imports = true
+order_by_type = true
+length_sort_straight = true
+use_parentheses = true
+multi_line_output = 3
+known_local_folder = ['bin', 'src', 'tests']
+extend_skip = ["*pypoetry*"]
+skip = ["__init__.py"]
+skip_glob = ["**/.env*", "**/env/*", "**/.venv/*", "**/tests/*", "**/etc/*"]
+
+[tool.mypy]
+strict_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+check_untyped_defs = true
+disallow_untyped_defs = true
+disallow_any_generics = true
+no_implicit_reexport = false
+warn_unreachable = true
+warn_return_any = true
+
+[[tool.mypy.overrides]]
+module = [
+    "PySide6.*",
+    "cssutils.*",
+    "pandas.*",
+    "python_calamine.*",
+    "numpy.*",
+    "aenum.*",
+    "torch.*",
+    "yaml.*",
+    "pywt.*",
+    "pydantic.*",
+]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pyqt_frameless_window.*"
+ignore_errors = true
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 120
+skip-string-normalization = true
+exclude = '''
+^/(
+  (
+    | \.git
+    | \.mypy_cache
+    | \.pytest_cache
+    | \.venv
+    | venv
+    | .venv
+    | backend_utils
+  )/
+)
+'''
+
+
+[build-system]
+requires = ["poetry-core", "isort", "black", "flake8"]
+build-backend = "poetry.core.masonry.api"

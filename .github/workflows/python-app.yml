@@ -35,4 +35,4 @@ jobs:
 
     - name: Test with pytest
       run: |
-        python3 -m pytest ./tests
+        poetry run pytest ./tests

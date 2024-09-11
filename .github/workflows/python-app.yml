@@ -29,6 +29,10 @@ jobs:
         pip install poetry
         poetry lock --no-update
         poetry install --no-root
+    - name: Check
+      run: |
+        python -m pip freeze
+
     - name: Test with pytest
       run: |
         python3 -m pytest ./tests

@@ -28,8 +28,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install poetry
         ls /opt/hostedtoolcache/Python/3.11.9/x64
-        ls /opt/hostedtoolcache/Python/3.11.9
-        poetry env use /opt/hostedtoolcache/Python/3.11.9/x64
         poetry install --no-root
     - name: Test with pytest
       run: |

@@ -27,6 +27,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install poetry
+        poetry env use /opt/hostedtoolcache/Python/3.11.9/x64
         poetry install --no-root
     - name: Test with pytest
       run: |

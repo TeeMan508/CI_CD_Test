@@ -33,8 +33,7 @@ jobs:
     - name: Run main script
       run: |
         chmod +x ./main.py
-        ls -lah
-        
+        poetry run ./main.py
 
     - name: Test with pytest
       run: |

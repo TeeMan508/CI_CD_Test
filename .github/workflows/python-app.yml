@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build_and_test:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v4
 
@@ -32,7 +32,7 @@ jobs:
 
     - name: Run main script
       run: |
-        chmod +x ./main.py
+        
         poetry run ./main.py
 
     - name: Test with pytest

@@ -1,7 +1,7 @@
 from bin import calculate_mean
 
 
-# ! /opt/hostedtoolcache/Python/
+#!/opt/hostedtoolcache/Python/
 
 def main_func():
     raise AssertionError("ERROR HERE!!!")

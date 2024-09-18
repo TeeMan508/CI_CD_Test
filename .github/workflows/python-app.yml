@@ -29,6 +29,8 @@ jobs:
         poetry install --no-root
 
   tests:
+    runs-on: ubuntu-latest
+    steps:
     - name: Test with pytest
       run: |
         poetry run pytest ./tests

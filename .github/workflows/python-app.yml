@@ -32,7 +32,7 @@ jobs:
 
     - name: Run main script
       run: |
-        chmod -x ./main.py
+        chmod +x ./main.py
         ls -lah
         
 

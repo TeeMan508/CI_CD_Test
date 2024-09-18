@@ -10,6 +10,7 @@ python = "3.11.x"
 pandas = "^2.2.2"
 setuptools = "70.0.0"
 pytest = "^8.3.3"
+logging = "^0.4.9.6"
 
 [[tool.poetry.source]]
 name = "pytorch_cpu"

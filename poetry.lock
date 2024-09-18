@@ -23,6 +23,16 @@ files = [
 ]
 
 [[package]]
+name = "logging"
+version = "0.4.9.6"
+description = "A logging module for Python"
+optional = false
+python-versions = "*"
+files = [
+    {file = "logging-0.4.9.6.tar.gz", hash = "sha256:26f6b50773f085042d301085bd1bf5d9f3735704db9f37c1ce6d8b85c38f2417"},
+]
+
+[[package]]
 name = "numpy"
 version = "2.1.1"
 description = "Fundamental package for array computing in Python"
@@ -264,4 +274,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.x"
-content-hash = "676ff3b7aabf2ff20a0f260bb5366e74a28eac4e5baf1d4eff70d4a21c2bfd32"
+content-hash = "a249102f55086052a803085547cdcae38dfa8b4accd506884ab8b6184f1141c3"

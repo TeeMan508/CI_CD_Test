@@ -14,9 +14,7 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-        
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.11
@@ -29,10 +27,8 @@ jobs:
         pip install poetry
         poetry lock --no-update
         poetry install --no-root
-    - name: Check
-      run: |
-        python -m pip freeze
 
+  tests:
     - name: Test with pytest
       run: |
         poetry run pytest ./tests

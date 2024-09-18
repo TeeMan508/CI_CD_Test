@@ -32,7 +32,6 @@ jobs:
 
     - name: Run main script
       run: |
-        
         poetry run ./main.py
 
     - name: Test with pytest
